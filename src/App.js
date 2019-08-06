@@ -1,15 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import Customer from './components/Customer';
 
-function App() {
-  //JSX 상 class를 className이라고 명시
-  return (
-    <div className="gray-background">
-      <img src={logo} alt="logo"/>
-      <h2>Let's develop management system!</h2>
-    </div>
-  );
+const customers = [
+  {
+    id:1,
+    image:'https://placeimg.com/64/64/1',
+    name:'bae',
+    birthday: '880214',
+    gender:'man',
+    job:'developer'
+  },
+  {
+    id:2,
+    image:'https://placeimg.com/64/64/2',
+    name:'so',
+    birthday: '910423',
+    gender:'official',
+    job:''
+  },
+  {
+    id:3,
+    image:'https://placeimg.com/64/64/3',
+    name:'go',
+    birthday: '130330',
+    gender:'man',
+    job:'student'
+  }]
+
+class App extends Component{
+  render(){
+    return(
+      <div>
+        {customers.map(c => {return (<Customer key={c.id} id={c.id} image ={c.image} name={c.name} birthday={c.birthday} gender={c.gender}/>);})}
+      </div>
+    );
+  }
 }
 
 export default App;
