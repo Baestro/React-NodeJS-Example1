@@ -9,7 +9,6 @@ import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import {withStyles} from '@material-ui/core/styles';
-import { Tab } from '@material-ui/core';
 
 import CircularDeterminate from './components/CircularDeterminate';
 
